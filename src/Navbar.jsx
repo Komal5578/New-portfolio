@@ -36,7 +36,7 @@ export default function Navbar() {
             Education
           </a>
           <a
-            href="#skills"
+            href="#techstack"
             className="text-lg font-semibold cursor-pointer hover:text-purple-300"
           >
             Skills

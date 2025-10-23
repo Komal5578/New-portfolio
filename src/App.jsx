@@ -17,7 +17,7 @@ export default function App() {
         <Bgvideo />
       </div>
 
-      {/* 🔵 All content scrolls above video */}
+      
       <main className="relative z-10">
         <section className="min-h-screen flex items-center justify-center text-white text-center">
           <Home />
