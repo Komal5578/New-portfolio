@@ -57,7 +57,7 @@ export default function Navbar() {
       </nav>
 
       <header id="home" className="pt-36">
-        <h1 className="text-6xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500">
+        <h1 className="hidden md:block text-6xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500 ">
           Welcome to My Portfolio
         </h1>
       </header>

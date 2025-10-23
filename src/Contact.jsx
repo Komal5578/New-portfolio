@@ -1,11 +1,38 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 export default function ContactMe() {
+  const [status, setStatus] = useState("");
+
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const data = new FormData(form);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: data,
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setStatus("success");
+        form.reset();
+        setTimeout(() => setStatus(""), 5000);
+      } else {
+        setStatus("error");
+      }
+    } catch (error) {
+      setStatus("error");
+    }
+  };
 
   return (
     <section id="contact" className="py-16 px-6 bg-transparent text-white">
@@ -13,15 +40,21 @@ export default function ContactMe() {
         <h2 className="text-4xl font-bold">
           Contact <span className="text-blue-500">Me</span>
         </h2>
-        <p className="text-gray-400 mt-2">Let’s connect and build something great together!</p>
+        <p className="text-gray-400 mt-2">Let's connect and build something great together!</p>
       </div>
 
       <form
         data-aos="fade-up"
-        action="https://formspree.io/f/{your-id}" // replace with your Formspree or backend endpoint
-        method="POST"
+        onSubmit={handleSubmit}
         className="max-w-xl mx-auto bg-gradient-to-br from-purple-700 to-blue-500 p-8 rounded-xl shadow-lg space-y-6"
       >
+        
+        <input 
+          type="hidden" 
+          name="access_key" 
+          value="0357ce5b-a88b-42a2-afad-2cc17a906479" 
+        />
+
         <div>
           <label className="block mb-1 font-medium">Name</label>
           <input
@@ -58,6 +91,13 @@ export default function ContactMe() {
         >
           Send Message
         </button>
+
+        {status === "success" && (
+          <p className="text-green-300 text-center font-semibold">✓ Message sent successfully!</p>
+        )}
+        {status === "error" && (
+          <p className="text-red-300 text-center font-semibold">✗ Something went wrong. Please try again.</p>
+        )}
       </form>
     </section>
   );

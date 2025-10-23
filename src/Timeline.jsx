@@ -17,7 +17,8 @@ export default function EducationTimeline() {
             <div className="bg-white p-5 rounded-lg shadow-md w-full max-w-md">
               <span className="text-sm text-blue-600 font-semibold">{item.year}</span>
               <h3 className="text-xl font-bold">{item.title}</h3>
-              <p className="text-gray-600">{item.description}</p>
+              <p className="text-gray-60 
+              0">{item.description}</p>
             </div>
           </motion.div>
         ))}

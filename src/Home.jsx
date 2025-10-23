@@ -8,7 +8,7 @@ export default function Home() {
       
       {/* LEFT: TEXT & ICONS */}
       <div className="md:w-1/2 mb-10 md:mb-0 ">
-        <h1 className="text-6xl md:text-7xl font-bold mb-10 ml-10">
+        <h1 className=" md:justify-start text-6xl md:text-7xl font-bold mb-10 ml-10">
           Hello I am,{" "}
           <span className="text-6xl md:text-8xl text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500">
             Komal
@@ -16,7 +16,7 @@ export default function Home() {
         </h1>
 
         {/* Social Icons */}
-        <div className="flex space-x-6 mb-8 text-3xl text-white ml-[225px]">
+        <div className="flex justify-center md:justify-start space-x-6 mb-8 text-3xl text-white md:ml-[225px]">
           <a
             href="mailto:komalsk1472@gmail.com"
             target="_blank"
@@ -43,7 +43,7 @@ export default function Home() {
           </a>
         </div>
 
-        {/* Resume Button */}
+        
         <a
           href="https://drive.google.com/file/d/1FzJAiwf5BUqP53Hj9MlUEsJTuF3GPNOb/view"
           className="ml-10 bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition duration-300"
