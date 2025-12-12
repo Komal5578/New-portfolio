@@ -39,6 +39,18 @@ const projects = [
     tech: ["React", "Tailwind", "Framer Motion"],
     image: "/portfolio.jpg",
   },
+  {
+    name: "Everbloom",
+    description: "An ecommerce platform for handcrafted blooms with add to cart, buy now, and user authentication.",
+    tech: ["React", "Firebase", "Tailwind CSS"],
+    image: "/everbloom.png",
+  },
+  {
+    name: "LevelUpFi",
+    description: "A gamified learning platform where users learn finance through 6 interactive games.",
+    tech: ["React", "JavaScript", "Interactive Games"],
+    image: "/levelupfi.png",
+  },
 ];
 
 export default function Projects() {

@@ -1,5 +1,7 @@
+import { useState, useEffect } from "react";
 import "./index.css";
 import "./App.css"
+import Loader from "./Loader";
 import Bgvideo from "./Bgvideo";
 import Navbar from "./Navbar";
 import Home from "./Home";
@@ -8,8 +10,19 @@ import EducationTimeline from "./Education";
 import Projects from "./Projects"
 import ContactMe from "./Contact"
 export default function App() {
+  const [showLoader, setShowLoader] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowLoader(false);
+    }, 6000); // Show loader for 6 seconds
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <>
+      {showLoader && <Loader fadeOut={!showLoader} onAnimationEnd={() => setShowLoader(false)} />}
       <Navbar />
 
      

@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import Bgvideo from "./Bgvideo"
 const educationData = [
   {
     year: "2022",
@@ -25,25 +24,25 @@ const educationData = [
 
 export default function EducationTimeline() {
   return (
-    
-    <section  id="education" className="bg-transparent py-12 px-6 min-h-screen flex flex-col items-center">
-      <h2 className="text-6xl md:text-8xl text-transparent font-bold bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500 mb-[20px]">
-         Education </h2>
-  
-      <div className="relative border-l-4 border-blue-600 pl-6 max-w-2xl w-full">
+    <section id="education" className="bg-transparent py-10 px-6 flex flex-col items-center">
+      <h2 className="text-5xl md:text-6xl text-transparent font-bold bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500 mb-8">
+        Education
+      </h2>
+
+      <div className="relative border-l-4 border-blue-600 pl-5 max-w-2xl w-full">
         {educationData.map((item, idx) => (
           <motion.div
             key={idx}
-            initial={{ opacity: 0, x: -40 }}
+            initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: idx * 0.2 }}
-            className="mb-10"
+            transition={{ duration: 0.4, delay: idx * 0.15 }}
+            className="mb-8"
           >
-            <div className="bg-blue-200 p-6 rounded-lg shadow-md">
-              <div className="text-purple-700 font-bold text-lg">{item.year}</div>
-              <div className="text-xl font-bold mb-2">{item.title}</div>
-              <div className="text-white-700">{item.description}</div>
+            <div className="bg-white/5 border border-white/10 backdrop-blur-md p-5 rounded-lg shadow-md transition-all duration-300 hover:bg-gradient-to-r hover:from-purple-600/25 hover:to-blue-500/25 hover:border-purple-400/40 hover:shadow-lg hover:shadow-purple-500/20">
+              <div className="text-purple-200 font-bold text-lg">{item.year}</div>
+              <div className="text-xl font-semibold mb-1 text-white">{item.title}</div>
+              <div className="text-gray-200 text-sm md:text-base">{item.description}</div>
             </div>
           </motion.div>
         ))}
