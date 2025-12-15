@@ -4,40 +4,16 @@ import "aos/dist/aos.css";
 
 const projects = [
   {
-    name: "Simon Says Game",
-    description: "A fun memory game that tests your pattern recognition skills.",
-    tech: ["HTML", "CSS", "JavaScript"],
-    image: "/simon.jpg", 
-  },
-  {
-    name: "Spotify Clone",
-    description: "Music streaming UI clone of Spotify with modern styling.",
-    tech: ["Html", "Bootstrap"],
-    image: "/spotify.jpg",
+    name: "Portfolio Website",
+    description: "Personal portfolio site to showcase projects and skills.",
+    tech: ["React", "Tailwind", "Framer Motion"],
+    image: "/portfolio.jpg",
   },
   {
     name: "Wanderlust",
     description: "A fullstack travel booking app with user auth and reviews.",
     tech: ["MongoDB", "Express", "React", "Node.js"],
     image: "/wanderlust.jpg",
-  },
-  {
-    name: "Weather App",
-    description: "Search any city and view real-time weather information.",
-    tech: ["React", "OpenWeather API"],
-    image: "/weather.jpg",
-  },
-  {
-    name: "To-Do App",
-    description: "A simple and efficient to-do list with edit/delete features.",
-    tech: ["React", "Local Storage"],
-    image: "/todo.jpg",
-  },
-  {
-    name: "Portfolio Website",
-    description: "Personal portfolio site to showcase projects and skills.",
-    tech: ["React", "Tailwind", "Framer Motion"],
-    image: "/portfolio.jpg",
   },
   {
     name: "Everbloom",
@@ -51,6 +27,32 @@ const projects = [
     tech: ["React", "JavaScript", "Interactive Games"],
     image: "/levelupfi.png",
   },
+  {
+    name: "Simon Says Game",
+    description: "A fun memory game that tests your pattern recognition skills.",
+    tech: ["HTML", "CSS", "JavaScript"],
+    image: "/simon.jpg", 
+  },
+  {
+    name: "Spotify Clone",
+    description: "Music streaming UI clone of Spotify with modern styling.",
+    tech: ["Html", "Bootstrap"],
+    image: "/spotify.jpg",
+  },
+  
+  {
+    name: "Weather App",
+    description: "Search any city and view real-time weather information.",
+    tech: ["Bootstrap", "OpenWeather API"],
+    image: "/weather.jpg",
+  },
+  {
+    name: "To-Do App",
+    description: "A simple and efficient to-do list with edit/delete features.",
+    tech: ["JavaScript", "Local Storage"],
+    image: "/todo.jpg",
+  },
+  
 ];
 
 export default function Projects() {
