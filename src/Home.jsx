@@ -86,7 +86,7 @@ export default function Home() {
       <motion.div 
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
+        transition={{ duration: 0.9, delay: 0.2 }}
         className="md:w-1/2 flex justify-center"
       >
         <motion.img
