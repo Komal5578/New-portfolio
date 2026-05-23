@@ -75,7 +75,7 @@ export default function Home() {
           transition={{ duration: 0.5, delay: 0.7 }}
           whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(147, 51, 234, 0.5)" }}
           whileTap={{ scale: 0.95 }}
-          href="https://drive.google.com/file/d/1JGkB65r2aLhbyAl7xGPoszXLDOBXHB9V/view?usp=sharing"
+          href="https://drive.google.com/file/d/14xJDrd5tuLuY6LJf3vX9UXNGVRt7lOFY/view?usp=sharing"
           className="mx-auto md:mx-0 bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition duration-300"
         >
           View Resume
