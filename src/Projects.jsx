@@ -47,8 +47,9 @@ const techIcons = {
   SQL: faDatabase,
   "Local Storage": "localstorage.png",
   LocalStorage: localStorageIcon,
-  TypeScript :faTypescript,
-  
+  TypeScript: faTypescript,
+  Supabase: "https://www.vectorlogo.zone/logos/supabase/supabase-icon.svg",
+  Postgresql: "https://www.vectorlogo.zone/logos/postgresql/postgresql-icon.svg",
 };
 
 const techColors = {
@@ -72,6 +73,8 @@ const techColors = {
   SQL: "#00758F",
   LocalStorage: "#fff",
   TypeScript: "#3178C6",
+  Supabase: "#3ECF8E",
+  Postgresql: "#336791",
 };
 
 const firstYearProjects = [
@@ -143,7 +146,7 @@ const secondYearProjects = [
       "A management system designed for tiffin delivery service providers. It streamlines order management, route optimization, menu planning, and customer relationships in one unified platform.",
     tech: ["TypeScript", "Node.js", "React", "MongoDB"],
     image: "/nourishnet.png",
-    link: "https://nourish-net-swart.vercel.app/", // Update with the actual project link if available
+    link: "https://nourish-net-swart.vercel.app/",
     repo: "https://github.com/Komal5578/NourishNet",
   },
   {
@@ -152,10 +155,26 @@ const secondYearProjects = [
       "An AI-powered digital twin platform featuring a chat-based health coach, timeline simulator (1, 5, 10 years), and dynamic avatar modeling to project personalized health outcomes.",
     tech: ["AI", "Node.js", "React", "MongoDB"],
     image: "/healthmirror.png",
-    link: "https://health-mirror-nine.vercel.app/", // Update with the actual project link if available
+    link: "https://health-mirror-nine.vercel.app/",
     repo: "https://github.com/Komal5578/HealthMirror",
   },
-  
+  {
+    name: "ClinicPro",
+    description:
+      "ClinicPro is an AI web app for Indian clinics across General Physician, Ayurvedic, and Dental practices",
+    tech: ["AI", "Node.js", "React", "Supabase", "Postgresql"],
+    image: "/clinicpro.png",
+    repo: "https://github.com/Komal5578/ClinicPro",
+  },
+  {
+  name: "PDF Toolkit",
+  description:
+    "A free, browser-based PDF toolkit featuring 6 tools — compress, merge, split, convert images/Word to PDF and more. No uploads, no limits.",
+  tech: ["React", "JavaScript", "Python"],
+  image: "/pdftoolkit.png",
+  link: "https://pdf-toolkit-pi.vercel.app/",
+  repo: "",
+  }
 ];
 
 export default function Projects() {
@@ -169,7 +188,6 @@ export default function Projects() {
   const scroll = (ref, direction) => {
     if (ref.current) {
       const scrollAmount = window.innerWidth < 640 ? 260 : 350;
-
       ref.current.scrollBy({
         left: direction === "left" ? -scrollAmount : scrollAmount,
         behavior: "smooth",
@@ -208,19 +226,26 @@ export default function Projects() {
           {project.description}
         </p>
 
-        {project.link && (
+        {(project.link || project.repo) && (
           <div className="flex gap-2 mt-5">
-            <button
-              className="bg-black/30 px-2 py-1 rounded-md text-sm text-white"
-              onClick={() => window.open(project.link, "_blank")}
-            >
-              Live Demo
-            </button>
-
+            {project.link && (
+              <button
+                className="bg-black/30 px-2 py-1 rounded-md text-sm text-white"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  window.open(project.link, "_blank");
+                }}
+              >
+                Live Demo
+              </button>
+            )}
             {project.repo && (
               <button
                 className="bg-black/30 px-2 py-1 rounded-md text-sm text-white"
-                onClick={() => window.open(project.repo, "_blank")}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  window.open(project.repo, "_blank");
+                }}
               >
                 GitHub Repo
               </button>
@@ -268,7 +293,6 @@ export default function Projects() {
             Projects
           </span>
         </h2>
-
         <p className="text-gray-400 mt-2">Here are a few of my recent works</p>
       </div>
 
