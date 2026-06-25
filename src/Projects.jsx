@@ -169,7 +169,7 @@ const secondYearProjects = [
   {
   name: "PDF Toolkit",
   description:
-    "A free, browser-based PDF toolkit featuring 6 tools — compress, merge, split, convert images/Word to PDF and more. No uploads, no limits.",
+    "A free, browser-based PDF toolkit featuring 6 tools — compress, merge, split, Word to PDF and more. No uploads, no limits.",
   tech: ["React", "JavaScript"],
   image: "/pdftoolkit.png",
   link: "https://pdf-toolkit-pi.vercel.app/",
