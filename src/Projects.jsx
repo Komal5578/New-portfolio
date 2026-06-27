@@ -164,6 +164,7 @@ const secondYearProjects = [
       "ClinicPro is an AI web app for Indian clinics across General Physician, Ayurvedic, and Dental practices",
     tech: ["AI", "Node.js", "React", "Supabase", "Postgresql"],
     image: "/clinicpro.png",
+    link: "https://clinic-pro-ten.vercel.app/" ,
     repo: "https://github.com/Komal5578/ClinicPro",
   },
   {
