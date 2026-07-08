@@ -41,7 +41,7 @@ export default function AboutMe() {
             transition={{ duration: 0.4, delay: 0.5 }}
             className="text-gray-200 text-base md:text-lg leading-relaxed"
           >
-            I build responsive, user-friendly web applications that solve real-world problems, and I'm currently expanding into <span className="text-purple-300 font-semibold">AI/ML</span> to develop more intelligent, capable solutions.
+            I enjoy building responsive and user-friendly web applications and working on projects that solve real-world problems. I'm passionate about learning new technologies and continuously improving my development skills.
           </motion.p>
         </motion.div>
       </motion.div>
